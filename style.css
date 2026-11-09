@@ -1,0 +1,202 @@
+.light-theme {
+  --background: white;
+}
+
+.dark-theme {
+  --background: #000000;
+  --gray-1: #000000;
+  --gray-2: #000000;
+  --menu-bg: #000000;
+}
+
+.light-theme,
+.dark-theme {
+  /* Theme variables */
+  --nyx-border: 1px solid var(--base-accent); 
+
+  /* Beekeeper variables */
+  --base-accent: #e33353;
+  --primary-contrast: #000000;
+  --icon-table-fg: #e33353;
+  --table-row-odd-bg: #0F0F0F;
+  --table-header-highlight-bg: #0F0F0F;
+  --table-header-shadow: inset 0 -1px var(--base-accent);
+  --table-row-header-shadow: 1px 0 var(--base-accent);
+  --tab-bg: #0F0F0F;
+  --syntax-keyword: var(--base-accent);
+  /* --btn-bg-hover: #0F0F0F; */
+
+  --badge-flat-bg: var(--red-7);
+  --badge-flat-fg: var(--primary-contrast);
+
+  /* Modified base colours */
+  --base-red: #e33353;
+  --base-pink: #ff78f7;
+  --base-blue: #4ad0ff;
+
+  /* Contrast for connection colours */ 
+  --orange-contrast: #000;
+  --red-contrast: #000;
+  --pink-contrast: #000;
+  --purple-contrast: #000;
+
+  --editor-fatcursor-bg: #e33353;
+  --icon-query-fg: var(--base-accent);
+
+
+  /* Custom mucking around with styles */
+
+  /* Borders separating elements on the connection screen */
+  div.gutter.gutter-vertical {
+    /* border-color: var(--base-accent); */
+    border-bottom: var(--nyx-border);
+  }
+
+  div.sidebar.connection-sidebar, .workspace-items.global-items {
+    border-right: var(--nyx-border);
+  }
+
+  .titlebar-wrapper {
+    border-bottom: var(--nyx-border);
+  }
+
+  /* Fix the header shadow disappearing when a cell is selected */
+  .tabulator .tabulator-header .tabulator-col {
+    box-shadow: var(--table-header-shadow);
+  }
+
+  /* Titlebar elements (menu, title, and buttons) */
+  .titlebar-wrapper span, #maximize, #minimize, #quit {
+    color: var(--base-accent);
+  }
+
+  div.control span.mode-options input:checked + .mode-option-content {
+    background: var(--base-accent);
+    color: var(--background);
+  }
+
+  .tabs-header .nav-link.active {
+    border: var(--nyx-border);
+    border-bottom: 0;
+  }
+
+  /* Workspace sidebar icons and select form controls */
+  .control span.mode-options .mode-option,
+  .workspace-item span, div.select-wrap select {
+    background-color: var(--background) !important;
+    border: var(--nyx-border) !important;
+    color: var(--base-accent) !important;
+  }
+
+  input.form-control:not(.filter-value),
+  input[type="number"]:not(.tabulator-paginator *),
+  .form-group input:not(.form-control) {
+    border: var(--nyx-border) !important;
+  }
+
+
+  .toolbar .filter-wrap input {
+    border: var(--nyx-border);
+    color: var(--base-accent);
+  }
+
+  .filter .filter-wrap:not(.multiple-filter *),
+  .multiple-filter .filter .filter-wrap input,
+  x-menu, div.quick-switcher-panel {
+    border: var(--nyx-border);
+    color: var(--base-accent);
+  }
+
+  button.quick-switcher-item, div.quick-switcher-header {
+    color: var(--base-accent);
+  }
+
+  div.select-wrap {
+    background-color: var(--background) !important;
+  }
+
+  .filter-wrap > input,
+  .material-icons.folder-icon,
+  .avatar > .material-icons-outlined,
+  .avatar > .material-icons {
+    color: var(--base-accent) !important;
+  }
+
+  button.btn.btn-flat, a.btn.btn-flat, button.btn.btn-primary.save {
+    --btn-bg: var(--background);
+    border: var(--nyx-border);
+  }
+
+  button.form-control.connection-type-btn,
+  .form-group > select,
+  div.advanced-connection-settings {
+    border: var(--nyx-border);
+  }
+
+  div.advanced-connection-settings .material-icons {
+    color: var(--base-accent);
+  }
+
+  input[type="checkbox"] {
+    outline: var(--nyx-border);
+  }
+
+  input::placeholder {
+    color: var(--base-accent);
+  }
+
+  .btn.btn-flat.data-select-wrap, .data-select-wrap {
+    border: var(--nyx-border);
+    background-color: var(--background);
+  }
+
+  .filter-wrap input.form-control {
+    background-color: var(--background);
+  }
+
+  /* Database select dropdown icon */
+  .data-select-wrap .material-icons {
+    color: var(--base-accent);
+  }
+
+  /* Clear filter button */
+  .action-item .material-icons-outlined {
+    color: var(--base-accent);
+  }
+
+  /* Global sidebar icons */
+  .global-items a span {
+    color: var(--base-accent);
+  }
+
+  /* General secondary button style */
+  .btn.btn-flat.btn-small {
+    background-color: var(--background);
+    border: 1px solid var(--base-accent);
+  }
+
+  .v--modal,
+  .flyout-nav ul:not(.menu-bar),
+  .card-flat,
+  .BksContextMenu-list {
+    border: var(--nyx-border);
+  }
+
+
+  .BksContextMenu-item-divider {
+    border-top: var(--nyx-border);
+  }
+
+  .bastion-host {
+    background-color: var(--background) !important;
+  }
+
+  .alert {
+    background-color: var(--background);
+    border: var(--nyx-border);
+  }
+
+  .cm-gutterElement.cm-activeLineGutter {
+    color: var(--base-accent);
+  }
+}
