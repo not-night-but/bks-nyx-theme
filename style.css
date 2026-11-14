@@ -16,23 +16,30 @@
 .dark-theme {
   /* Theme variables */
   --nyx-border: 1px solid var(--base-accent); 
+  --nyx-red: #e33353;
 
   /* Beekeeper variables */
-  --base-accent: #e33353;
+  --base-accent: var(--nyx-red);
   --primary-contrast: #000000;
-  --icon-table-fg: #e33353;
+  --icon-table-fg: var(--nyx-red);
+  --icon-schema-fg: var(--nyx-red);
   --table-header-shadow: inset 0 -1px var(--base-accent);
   --table-row-header-shadow: 1px 0 var(--base-accent);
   --syntax-keyword: var(--base-accent);
+  --syntax-variable: var(--base-yellow);
+  --syntax-puncatuation: var(--base-accent);
   /* --btn-bg-hover: #0F0F0F; */
 
   --badge-flat-bg: var(--red-7);
   --badge-flat-fg: var(--primary-contrast);
 
   /* Modified base colours */
-  --base-red: #e33353;
+  --base-red: var(--nyx-red);
   --base-pink: #ff78f7;
-  --base-blue: #4ad0ff;
+  --base-blue: #42858C;
+  --base-green: #82D173;
+  --base-purple: #613F75;
+  --base-yellow: #D19C1D;
 
   /* Contrast for connection colours */ 
   --orange-contrast: #000;
@@ -40,9 +47,16 @@
   --pink-contrast: #000;
   --purple-contrast: #000;
 
-  --editor-fatcursor-bg: #e33353;
+  --editor-fatcursor-bg: var(--nyx-red);
   --icon-query-fg: var(--base-accent);
 
+  /* Vim panel (yoinked from solarized) */
+  --editor-vim-panel-insert-bg: rgb(from var(--base-green) r g b / 0.15);
+  --editor-vim-panel-insert-fg: var(--base-green);
+  --editor-vim-panel-visual-bg: rgb(from var(--base-blue) r g b / 0.15);
+  --editor-vim-panel-visual-fg: var(--base-blue);
+  --editor-vim-panel-replace-bg: rgb(from var(--base-red) r g b / 0.15);
+  --editor-vim-panel-replace-fg: var(--base-red);
 
   /* Custom mucking around with styles */
 
@@ -75,6 +89,20 @@
     color: var(--background);
   }
 
+  .selectbutton > x-button[toggled] span.togglebutton-content {
+    background: var(--base-accent) !important;
+    color: var(--background);
+  }
+
+  .selectbutton {
+    background: var(--background);
+    border: var(--nyx-border)
+  }
+
+  .selectbutton x-button {
+    background: var(--background);
+  }
+
   .tabs-header .nav-link.active {
     border: var(--nyx-border);
     border-bottom: 0;
@@ -82,7 +110,7 @@
 
   /* Workspace sidebar icons and select form controls */
   .control span.mode-options .mode-option,
-  .workspace-item span, div.select-wrap select {
+  .workspace-item span:not(.workspace-letter), div.select-wrap select {
     background-color: var(--background) !important;
     border: var(--nyx-border) !important;
     color: var(--base-accent) !important;
@@ -131,6 +159,7 @@
   .form-group > select,
   div.advanced-connection-settings {
     border: var(--nyx-border);
+    background: var(--background);
   }
 
   div.advanced-connection-settings .material-icons {
@@ -172,7 +201,8 @@
   /* General secondary button style */
   .btn.btn-flat.btn-small {
     background-color: var(--background);
-    border: 1px solid var(--base-accent);
+    border: var(--nyx-border);
+    border-radius: var(--btn-border-radius);
   }
 
   .v--modal,
@@ -198,5 +228,10 @@
 
   .cm-gutterElement.cm-activeLineGutter {
     color: var(--base-accent);
+  }
+
+  .list-item-btn:hover {
+    border: var(--nyx-border);
+    background: var(--background);
   }
 }
