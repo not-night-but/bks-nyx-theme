@@ -15,8 +15,9 @@
 .light-theme,
 .dark-theme {
   /* Theme variables */
-  --nyx-border: 1px solid var(--base-accent); 
+  --nyx-border: 1px solid var(--base-accent);
   --nyx-red: #e33353;
+  --nyx-selected: #e3335366;
 
   /* Beekeeper variables */
   --base-accent: var(--nyx-red);
@@ -41,13 +42,15 @@
   --base-purple: #613F75;
   --base-yellow: #D19C1D;
 
-  /* Contrast for connection colours */ 
+  /* Contrast for connection colours */
   --orange-contrast: #000;
   --red-contrast: #000;
   --pink-contrast: #000;
   --purple-contrast: #000;
+  --yellow-contrast: #000;
 
   --editor-fatcursor-bg: var(--nyx-red);
+  --editor-selected-bg: var(--nyx-selected);
   --icon-query-fg: var(--base-accent);
 
   /* Vim panel (yoinked from solarized) */
@@ -66,7 +69,8 @@
     border-bottom: var(--nyx-border);
   }
 
-  div.sidebar.connection-sidebar, .workspace-items.global-items {
+  div.sidebar.connection-sidebar,
+  .workspace-items.global-items {
     border-right: var(--nyx-border);
   }
 
@@ -80,16 +84,19 @@
   }
 
   /* Titlebar elements (menu, title, and buttons) */
-  .titlebar-wrapper span, #maximize, #minimize, #quit {
+  .titlebar-wrapper span,
+  #maximize,
+  #minimize,
+  #quit {
     color: var(--base-accent);
   }
 
-  div.control span.mode-options input:checked + .mode-option-content {
+  div.control span.mode-options input:checked+.mode-option-content {
     background: var(--base-accent);
     color: var(--background);
   }
 
-  .selectbutton > x-button[toggled] span.togglebutton-content {
+  .selectbutton>x-button[toggled] span.togglebutton-content {
     background: var(--base-accent) !important;
     color: var(--background);
   }
@@ -110,7 +117,8 @@
 
   /* Workspace sidebar icons and select form controls */
   .control span.mode-options .mode-option,
-  .workspace-item span:not(.workspace-letter), div.select-wrap select {
+  .workspace-item span:not(.workspace-letter),
+  div.select-wrap select {
     background-color: var(--background) !important;
     border: var(--nyx-border) !important;
     color: var(--base-accent) !important;
@@ -130,12 +138,14 @@
 
   .filter .filter-wrap:not(.multiple-filter *),
   .multiple-filter .filter .filter-wrap input,
-  x-menu, div.quick-switcher-panel {
+  x-menu,
+  div.quick-switcher-panel {
     border: var(--nyx-border);
     color: var(--base-accent);
   }
 
-  button.quick-switcher-item, div.quick-switcher-header {
+  button.quick-switcher-item,
+  div.quick-switcher-header {
     color: var(--base-accent);
   }
 
@@ -143,20 +153,22 @@
     background-color: var(--background) !important;
   }
 
-  .filter-wrap > input,
+  .filter-wrap>input,
   .material-icons.folder-icon,
-  .avatar > .material-icons-outlined,
-  .avatar > .material-icons {
+  .avatar>.material-icons-outlined,
+  .avatar>.material-icons {
     color: var(--base-accent) !important;
   }
 
-  button.btn.btn-flat, a.btn.btn-flat, button.btn.btn-primary.save {
+  button.btn.btn-flat,
+  a.btn.btn-flat,
+  button.btn.btn-primary.save {
     --btn-bg: var(--background);
     border: var(--nyx-border);
   }
 
   button.form-control.connection-type-btn,
-  .form-group > select,
+  .form-group>select,
   div.advanced-connection-settings {
     border: var(--nyx-border);
     background: var(--background);
@@ -174,7 +186,8 @@
     color: var(--base-accent);
   }
 
-  .btn.btn-flat.data-select-wrap, .data-select-wrap {
+  .btn.btn-flat.data-select-wrap,
+  .data-select-wrap {
     border: var(--nyx-border);
     background-color: var(--background);
   }
