@@ -49,6 +49,10 @@
   --purple-contrast: #000;
   --yellow-contrast: #000;
 
+  --bg-hover: var(--background);
+  --btn-fg-hover: var(--nyx-red);
+  --btn-icon-fg-hover: var(--nyx-red);
+
   --editor-fatcursor-bg: var(--nyx-red);
   --editor-selected-bg: var(--nyx-selected);
   --icon-query-fg: var(--base-accent);
@@ -246,5 +250,40 @@
   .list-item-btn:hover {
     border: var(--nyx-border);
     background: var(--background);
+  }
+
+  .plugin-list .item:hover {
+    border: var(--nyx-border);
+  }
+
+  .config-nav .btn.nav-btn.active {
+    background: var(--background);
+    border: var(--nyx-border);
+  }
+
+  .btn-icon.pin:hover {
+    color: var(--base-accent);
+  }
+
+  .presets .form-row:hover {
+    background-color: transparent;
+  }
+
+  .core-columns .presets {
+    background-color: var(--background);
+  }
+
+  .form-row.formatter-settings__inputs:hover {
+    background-color: var(--background);
+  }
+
+  .form-row.formatter-settings__inputs select,
+  .presets .form-row select,
+  .presets .form-row input {
+    border: var(--nyx-border);
+  }
+
+  .presets .menu-btn:hover .material-icons {
+    color: var(--btn-fg-hover) !important;
   }
 }
