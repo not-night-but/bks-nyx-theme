@@ -41,6 +41,7 @@
   --base-green: #82D173;
   --base-purple: #613F75;
   --base-yellow: #D19C1D;
+  --base-orange: #ff9f1c;
 
   /* Contrast for connection colours */
   --orange-contrast: #000;
@@ -247,7 +248,9 @@
     color: var(--base-accent);
   }
 
-  .list-item-btn:hover {
+  .list-item-btn:hover,
+  .list-item-btn.selected,
+  .list-item-btn.active {
     border: var(--nyx-border);
     background: var(--background);
   }
@@ -285,5 +288,60 @@
 
   .presets .menu-btn:hover .material-icons {
     color: var(--btn-fg-hover) !important;
+  }
+
+
+
+  footer.statusbar:not(.red),
+  div.connection-button:not(.red) {
+    color: var(--base-accent);
+    background: var(--background);
+  }
+
+  footer.statusbar:not(.red) x-button,
+  footer.statusbar:not(.red) .btn.statusbar-item {
+    background: var(--backgroun);
+    color: var(--base-accent);
+    border: var(--nyx-border);
+  }
+
+  footer.statusbar.pink,
+  div.connection-button.pink {
+    border-top: 1px solid var(--base-pink);
+  }
+
+  footer.statusbar.blue,
+  div.connection-button.blue {
+    border-top: 1px solid var(--base-blue);
+  }
+
+  footer.statusbar.green,
+  div.connection-button.green {
+    border-top: 1px solid var(--base-green);
+  }
+
+  footer.statusbar.purple,
+  div.connection-button.purple {
+    border-top: 1px solid var(--base-purple);
+  }
+
+  footer.statusbar.yellow,
+  div.connection-button.yellow {
+    border-top: 1px solid var(--base-yellow);
+  }
+
+  footer.statusbar.orange,
+  div.connection-button.orange {
+    border-top: 1px solid var(--base-orange);
+    /* box-shadow: inset 0 5px 5px -5px var(--base-orange); */
+  }
+
+  .cli-path-found-card {
+    background: var(--background);
+    border: var(--nyx-border);
+  }
+
+  button.btn.btn-primary.save {
+    background: var(--base-accent);
   }
 }
