@@ -344,4 +344,13 @@
   button.btn.btn-primary.save {
     background: var(--base-accent);
   }
+
+  .quicksearch-wrap input {
+    background: var(--background);
+  }
+
+  .quicksearch-wrap .results {
+    background: var(--background);
+    border: var(--nyx-border);
+  }
 }
