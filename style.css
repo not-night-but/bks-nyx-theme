@@ -123,7 +123,7 @@
   /* Workspace sidebar icons and select form controls */
   .control span.mode-options .mode-option,
   .workspace-item span:not(.workspace-letter),
-  div.select-wrap select {
+  div.select-wrap select:not(.red *) {
     background-color: var(--background) !important;
     border: var(--nyx-border) !important;
     color: var(--base-accent) !important;
@@ -154,7 +154,7 @@
     color: var(--base-accent);
   }
 
-  div.select-wrap {
+  div.select-wrap :not(.red *) {
     background-color: var(--background) !important;
   }
 
@@ -352,5 +352,32 @@
   .quicksearch-wrap .results {
     background: var(--background);
     border: var(--nyx-border);
+  }
+
+  div.v-select.select-wrap.dropdown-search {
+    background: var(--background);
+    border: var(--nyx-border);
+  }
+
+  #resultSelector {
+    border-radius: var(--btn-border-radius);
+  }
+
+  x-buttons.pending-changes x-button.btn-primary:nth-of-type(1) {
+    border-top-left-radius: var(--btn-border-radius) !important;
+    border-bottom-left-radius: var(--btn-border-radius) !important;
+  }
+
+  x-buttons.pending-changes x-button.btn-primary:nth-of-type(2) {
+    border-top-right-radius: var(--btn-border-radius) !important;
+    border-bottom-right-radius: var(--btn-border-radius) !important;
+  }
+
+  .global-status-bar .pending-changes>.btn[menu] {
+    border-left: var(--nyx-border);
+  }
+
+  .tabulator .tabulator-header .tabulator-frozen::before {
+    inset: 0 0 1px 0;
   }
 }
